@@ -30,7 +30,6 @@ steps:
   inputs:
     command: 'publish'
     publishWebProjects: true
-    arguments: '$(build.artifactsstagingdirectory)'
 
 - task: PublishBuildArtifacts@1
   inputs:
