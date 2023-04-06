@@ -32,6 +32,12 @@ steps:
     publishWebProjects: true
     arguments: '$(build.artifactsstagingdirectory)'
 
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'dotnet'
+    publishLocation: 'Container'
+    
 #- task: VSBuild@1
 #  inputs:
 #    solution: '$(solution)'
