@@ -29,6 +29,11 @@ steps:
   inputs:
     command: 'publish'
     publishWebProjects: true
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'publish'
+    publishWebProjects: true
+    arguments: '$(build.artifactsstagingdirectory)'
 
 #- task: VSBuild@1
 #  inputs:
