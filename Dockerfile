@@ -10,7 +10,6 @@ COPY . ./
 RUN dotnet publish -c Release -o out
 
 FROM mcr.microsoft.com/dotnet/aspnet:5.0
-EXPOSE 5009
 WORKDIR /app
 COPY --from=build /app/out .
 ENTRYPOINT ["dotnet", "dotnet-core-hello-world.dll"]
