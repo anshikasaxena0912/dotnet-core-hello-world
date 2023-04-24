@@ -2,7 +2,7 @@ FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /app
 
 # Copy csproj and restore as distinct layers
-COPY *.csproj ./
+COPY dotnet-core-hello-world.csproj ./
 RUN dotnet restore
 
 # Copy everything else and build website
